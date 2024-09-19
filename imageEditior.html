@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Image editior</title>
+    <link rel="stylesheet" href="imageEditior.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    />
+  </head>
+  <body>
+    <!-- <div class="container">
+      <i class="fa-brands fa-dropbox"></i>
+      <h2>drag and drop images here or ubload</h2>
+      <input type="button" value="upload"/>
+    </div> -->
+    <header>
+        <h2>ImageEditor</h2>
+    </header>
+    <div class="dropImgaes">
+        <i class="fa-brands fa-dropbox"></i>
+        <h2>drag and drop images here or ubload</h2>
+        <div class="ubloadInput">
+            <label for="ubload">Ubload Image</label>
+            <input type="file" id="ubload" />
+          </div>
+      </div>
+    
+    
+    <div class="container">
+      <div class="imgSide">
+        <div class="image">
+          <img id="img" />
+          <canvas id="canvas"></canvas>
+        </div>
+
+        <div class="ubloadInput">
+          <label for="ubload">replace Image</label>
+          <input type="file" id="ubload" />
+        </div>
+      </div>
+
+      <div class="filtersSide">
+        <ul>
+          <li>
+            <label for="satorate">Satorate</label>
+            <input type="range" id="satorate" min="0" max="200" value="100" />
+          </li>
+
+          <li>
+            <label for="contrast">contrast</label>
+            <input type="range" id="contrast" min="0" max="200" value="100" />
+          </li>
+
+          <li>
+            <label for="brightness">brightness</label>
+            <input type="range" id="brightness" min="0" max="200" value="100" />
+          </li>
+
+          <li>
+            <label for="sepia">sepia</label>
+            <input type="range" id="sepia" min="0" max="200" value="0" />
+          </li>
+
+          <li>
+            <label for="grayscale">grayscale</label>
+            <input
+              type="range"
+              id="grayscale"
+              step="0.1"
+              min="0"
+              max="1"
+              value="0"
+            />
+          </li>
+
+          <li>
+            <label for="blur">blur</label>
+            <input
+              type="range"
+              id="blur"
+              step="0.1"
+              min="0"
+              max="10"
+              value="0"
+            />
+          </li>
+
+          <li>
+            <label for="hue-rotate">hue Rotate</label>
+            <input type="range" id="hue-rotate" min="0" max="350" value="0" />
+          </li>
+
+          <li>
+            <a download="image" id="download">download</a>
+            <!--الاسم الي بحطو داخل الداونلود هو اسم الصورة لما تتحمل-->
+            <span onclick="resetFilters()">reset</span>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <script src="imageEditior.js"></script>
+  </body>
+</html>
